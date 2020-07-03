@@ -1,3 +1,18 @@
+
+
+const { nextISSTimesForMyLocation } = require('./iss');
+
+nextISSTimesForMyLocation((error, passTimes) => {
+  if (error) {
+    return console.log("It didn't work!", error);
+  }
+  // success, print out the deets!
+  console.log(passTimes);
+});
+
+
+// OLD WAY
+
 // const { fetchMyIP } = require('./iss');
 // const { fetchCoordsByIP } = require('./iss');
 // const { fetchISSFlyOverTimes } = require('./iss');
@@ -27,9 +42,3 @@
 //   console.log('It worked! ISS Pass Times:' , result);
 // });
 
-
-
-
-// module.exports = {
-//   fetchMyIP
-// }
